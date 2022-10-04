@@ -1,5 +1,6 @@
 <?php
 
+use  php_formulario\Controller\LoginController;
 use php_formulario\Controller\PessoaController;
 use php_formulario\Controller\ProdutoController;
 use php_formulario\Controller\Categoria_ProdutoController;
@@ -9,6 +10,18 @@ $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch($uri_parse)
 {
+    case '/login':
+        LoginController::index();
+    break;
+
+    case '/login/auth':
+        LoginController::auth();
+    break;
+
+    case '/logout':
+        LoginController::logout();
+    break;
+ 
     case '/pessoa':
         PessoaController::index();
     break;
