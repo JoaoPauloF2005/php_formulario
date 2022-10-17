@@ -1,6 +1,6 @@
 <?php
 
-use  php_formulario\Controller\LoginController;
+use php_formulario\Controller\LoginController;
 use php_formulario\Controller\PessoaController;
 use php_formulario\Controller\ProdutoController;
 use php_formulario\Controller\Categoria_ProdutoController;
@@ -21,6 +21,12 @@ switch($uri_parse)
     case '/logout':
         LoginController::logout();
     break;
+
+    case '/':
+        echo "página inicial";
+        break;
+
+        
  
     case '/pessoa':
         PessoaController::index();
