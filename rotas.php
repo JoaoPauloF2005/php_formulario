@@ -38,6 +38,10 @@ switch($uri_parse)
         CadastroLoginController::auth();
     break;
 
+    case '/cadastrologin/logout':
+        CadastroLoginController::logout();
+    break;
+
     case '/':
         echo "página inicial";
         break;

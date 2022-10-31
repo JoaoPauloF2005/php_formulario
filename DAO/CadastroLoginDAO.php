@@ -33,10 +33,30 @@ class CadastroLoginDAO extends DAO
 
     }
 
+    public function select()
+    {
+        $sql = "SELECT * FROM cadastro";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    } 
+
+    public function selectById(int $id)
+    {
+        include_once 'Model/CadastroLogin.php';
+
+        $sql = "SELECT * FROM cadastro WHERE id = ?";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+
+        return $stmt->fetchObject("CadastroLogin.Model"); 
+    }
     
     public function selectByCadastroLogin($nome, $email, $senha)
     {
-        $sql = "SELECT * FROM cadastro WHERE nome = ?, WHERE email = ? AND senha = ? ";
+        $sql = "SELECT * FROM cadastro SET nome = ?, WHERE email = ? AND senha = sha1(?) ";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $nome);

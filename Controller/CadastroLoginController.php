@@ -29,7 +29,7 @@ class CadastroLoginController extends Controller
             header("Location: /");
 
         } else
-            header("Location: /login?erro=true");
+            header("Location: /cadastrologin?erro=true");
     }
 
     public static function logout()
@@ -38,4 +38,6 @@ class CadastroLoginController extends Controller
 
         parent::isAuthenticated();
     }
+
+
 }
