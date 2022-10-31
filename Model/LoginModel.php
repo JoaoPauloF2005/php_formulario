@@ -8,7 +8,7 @@ use  php_formulario\DAO\LoginDAO;
 class LoginModel extends Model
 {
     
-    public $id, $nome, $email, $senha;
+    public $id, $email, $senha;
 
 
  public function autenticar()

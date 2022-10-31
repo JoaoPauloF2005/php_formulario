@@ -1,10 +1,12 @@
 <?php
 
+use php_formulario\Controller\CadastroLoginController;
 use php_formulario\Controller\LoginController;
 use php_formulario\Controller\PessoaController;
 use php_formulario\Controller\ProdutoController;
 use php_formulario\Controller\Categoria_ProdutoController;
 use php_formulario\Controller\FuncionarioController;
+use php_formulario\DAO\CadastroLoginDAO;
 
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
@@ -22,9 +24,24 @@ switch($uri_parse)
         LoginController::logout();
     break;
 
+
+
     case '/':
         echo "página inicial";
         break;
+
+    case '/cadastrologin':
+        CadastroLoginController::index();
+    break;
+
+    case '/cadastrologin/auth':
+        CadastroLoginController::auth();
+    break;
+
+    case '/':
+        echo "página inicial";
+        break;
+        
 
         
  
