@@ -36,4 +36,10 @@ create table funcionario(
     primary key (id)
 );
 
+create table usuario(
+    id int auto_increment not null,
+    email varchar(100) not null,
+    senha varchar(100) not null,
+    primary key (id)    
+);
 
