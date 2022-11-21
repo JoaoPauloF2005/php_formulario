@@ -16,7 +16,7 @@
 <body>
     <form action="/pessoa/save" method="post">
 
-    <?php include 'View/modules/Pagina Inicial/home.php' ?>
+    <?php include 'View/modules/Pagina_Inicial/home.php' ?>
 
         <fieldset>
             <legend>Cadastro de Pessoa</legend>

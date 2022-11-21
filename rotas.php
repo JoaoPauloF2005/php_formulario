@@ -14,7 +14,7 @@ switch($uri_parse)
 {
 
     case '/home':
-        include 'View/modules/Pagina Inicial/home.php';
+        include 'View/modules/Pagina_Inicial/home.php';
     break;
 
     case '/login':
@@ -31,9 +31,7 @@ switch($uri_parse)
 
 
 
-    case '/':
-        echo "página inicial";
-        break;
+    
 
     case '/cadastrologin/form':
         CadastroLoginController::form();

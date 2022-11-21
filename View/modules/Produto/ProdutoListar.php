@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<?php include 'View/modules/Pagina Inicial/home.php' ?>
+<?php include 'View/modules/Pagina_Inicial/home.php' ?>
 
 
     <table>
