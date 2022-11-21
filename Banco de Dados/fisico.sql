@@ -37,16 +37,10 @@ create table funcionario(
 );
 
 create table usuario(
-    id int auto_increment not null,
-    email varchar(100) not null,
-    senha varchar(100) not null,
-    primary key (id)    
+  id INT AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
 );
 
-create table cadastro(
-    id int auto_increment not null,
-    nome varchar(100) not null,
-    email varchar(100) not null,
-    senha varchar(100) not null,
-    primary key (id)
-);

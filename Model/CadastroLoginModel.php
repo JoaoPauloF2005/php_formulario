@@ -21,24 +21,27 @@ class CadastroLoginModel extends Model
            
             $dao->insert($this);
         } 
-        else 
-        {
-           
-      
+        
+        header('Location: /login');
+        
         }
+
+        public function update()
+    {
+        $dao = new CadastroLoginDAO();
+
+        $dao->update($this);
     }
         public function getAllRows()
         {
-            include 'DAO/CadastroLoginDAO.php';
             $dao = new CadastroLoginDAO();
+ 
             $this->rows = $dao->select();
         }
 
 
         public function getById(int $id)
         {
-            include 'DAO/CadastroLoginDAO.php';
-
             $dao = new CadastroLoginDAO();
 
             $obj = $dao->selectById($id);
@@ -48,7 +51,7 @@ class CadastroLoginModel extends Model
 
 
 
-    public function autenticar()
+    /*public function autenticar()
        {
            $dao = new CadastroLoginDAO();
            
@@ -58,4 +61,6 @@ class CadastroLoginModel extends Model
                return $dados_usuario_cadastro;
            else
                null;
-       }}
+       }
+    */
+}
