@@ -14,7 +14,7 @@ class PessoaController extends Controller
        
         $model = new PessoaModel();
         $model->getAllRows();
-        include 'View/modules/Pessoa/ListaPessoas.php';
+        include 'View/modules/Pessoa/ListaPessoa.php';
     }
 
     
