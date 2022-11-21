@@ -47,8 +47,8 @@
                             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
                             <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Cadastre-se <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Login</a></li>
-                                    <li><a href="#">Cadastre-se</a></li>
+                                    <li><a href="/login">Login</a></li>
+                                    <li><a href="/cadastrologin/form">Cadastre-se</a></li>
                                 </ul>
                             </li>
                         </ul>
