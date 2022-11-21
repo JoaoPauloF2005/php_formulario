@@ -30,16 +30,16 @@ switch($uri_parse)
         echo "página inicial";
         break;
 
-    case '/cadastrologin':
-        CadastroLoginController::index();
+    case '/cadastrologin/form':
+        CadastroLoginController::form();
     break;
 
-    case '/cadastrologin/auth':
-        CadastroLoginController::auth();
+    case '/cadastrologin/save':
+        CadastroLoginController::save();
     break;
 
-    case '/cadastrologin/logout':
-        CadastroLoginController::logout();
+    case '/cadastrologin/update':
+        CadastroLoginController::update();
     break;
 
     case '/':

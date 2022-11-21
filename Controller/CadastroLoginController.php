@@ -6,12 +6,17 @@ use php_formulario\Model\CadastroLoginModel;
 
 class CadastroLoginController extends Controller
 {
-    public static function index()
+    public static function form()
     {
-        parent::render('CadastroLogin/FormCadastro');
+        $model = new CadastroLoginModel();
+    
+            if(isset($_GET['id']))
+                $model = $model->getById( (int) $_GET['id']);
+
+        parent::render('Cadastro/FormCadastro', $model);
     }
 
-    public static function auth()
+    /*public static function auth()
     {
         $model = new CadastroLoginModel();
 
@@ -31,13 +36,26 @@ class CadastroLoginController extends Controller
         } else
             header("Location: /cadastrologin?erro=true");
     }
+*/
 
-    public static function logout()
+    public static function save()
     {
-        unset($_SESSION['cadastrologin']);
+        $cadastro = new CadastroLoginModel();
 
-        parent::isAuthenticated();
+        $cadastro->id = $_POST['id'];
+        $cadastro->nome = $_POST['nome'];
+        $cadastro->email = $_POST['email'];
+        $cadastro->senha = $_POST['senha'];
+        $cadastro->save();
+
+        header("Location: /login");
     }
 
+    public static function update()
+    {
+        $model = new CadastroLoginModel();
+
+        parent::render('Cadastro/FormSenha', $model);
+    }
 
 }
