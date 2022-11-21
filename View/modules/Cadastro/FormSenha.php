@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<form action="/cadastro/update" method="post">
+<form action="/cadastrologin/update" method="post">
         <fieldset>
             <legend> Alterar Senha </legend>
 

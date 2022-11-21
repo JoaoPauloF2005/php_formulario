@@ -22,11 +22,11 @@
 
     <br> <br>
 
-    <a href="/cadastro/update"> Mudar senha </a>
+    <a href="/cadastrologin/update"> Não lembra a senha? </a>
 
     <br> <br>
 
-    <a href="/cadastro/form"> Não tem uma conta? Clique aqui para se cadastrar </a>
+    <a href="/cadastrologin/form"> Não tem uma conta? Clique aqui para se cadastrar </a>
     
     <br> <br>
 
